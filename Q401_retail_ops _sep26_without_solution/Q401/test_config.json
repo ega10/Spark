@@ -1,0 +1,149 @@
+[
+  {
+    "function": "define_schema",
+    "args": [],
+    "expected": "StructType"
+  },
+  {
+    "function": "load_data",
+    "args": [
+      "spark",
+      "path",
+      "schema"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "parse_dates",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "add_gross_amount",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "add_net_amount",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "add_delivery_days",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "flag_on_time_delivery",
+    "args": [
+      "df",
+      3
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "filter_returned_orders",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "filter_by_region",
+    "args": [
+      "df",
+      "North"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "top_n_customers_by_spend",
+    "args": [
+      "df",
+      3
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "revenue_by_category",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "top_category_by_revenue",
+    "args": [
+      "df"
+    ],
+    "expected": "str"
+  },
+  {
+    "function": "avg_discount_by_channel",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "daily_revenue_trend",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "high_value_orders",
+    "args": [
+      "df",
+      500.0
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "count_late_deliveries",
+    "args": [
+      "df",
+      3
+    ],
+    "expected": "int"
+  },
+  {
+    "function": "return_rate_by_category",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "best_selling_product",
+    "args": [
+      "df"
+    ],
+    "expected": "tuple"
+  },
+  {
+    "function": "list_channels",
+    "args": [
+      "df"
+    ],
+    "expected": "list_str"
+  },
+  {
+    "function": "orders_in_date_range",
+    "args": [
+      "df",
+      "2025-01-01",
+      "2025-01-31"
+    ],
+    "expected": "DataFrame"
+  }
+]

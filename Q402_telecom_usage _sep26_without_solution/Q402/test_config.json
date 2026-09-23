@@ -1,0 +1,149 @@
+[
+  {
+    "function": "define_schema",
+    "args": [],
+    "expected": "tuple"
+  },
+  {
+    "function": "load_data",
+    "args": [
+      "spark",
+      "path",
+      "schema"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "parse_event_date",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "add_total_activity",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "add_usage_score",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "filter_roaming_events",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "top_n_users_by_data",
+    "args": [
+      "df",
+      3
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "avg_latency_by_city",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "most_used_plan",
+    "args": [
+      "df"
+    ],
+    "expected": "str"
+  },
+  {
+    "function": "dropped_call_rate_by_plan",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "high_latency_events",
+    "args": [
+      "df",
+      150
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "count_users_per_city",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "daily_data_trend",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "top_device_by_usage_score",
+    "args": [
+      "df"
+    ],
+    "expected": "tuple"
+  },
+  {
+    "function": "list_cities",
+    "args": [
+      "df"
+    ],
+    "expected": "list_str"
+  },
+  {
+    "function": "events_in_date_range",
+    "args": [
+      "df",
+      "2025-03-01",
+      "2025-03-05"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "flag_network_risk",
+    "args": [
+      "df",
+      150,
+      1
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "top_n_risky_users",
+    "args": [
+      "df",
+      3
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "avg_data_per_plan",
+    "args": [
+      "df"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "get_heaviest_user",
+    "args": [
+      "df"
+    ],
+    "expected": "tuple"
+  }
+]
