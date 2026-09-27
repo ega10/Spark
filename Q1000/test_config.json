@@ -1,0 +1,370 @@
+[
+  {
+    "function": "define_trip_schema",
+    "args": [],
+    "expected": "StructType",
+    "visible": true,
+    "name": "Define trips schema"
+  },
+  {
+    "function": "load_trips",
+    "args": [
+      "spark",
+      "trip_path",
+      "trip_schema"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Load trips CSV"
+  },
+  {
+    "function": "parse_trip_date",
+    "args": [
+      "sample_trips_raw_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Parse trip_date to date"
+  },
+  {
+    "function": "add_trip_duration_min",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Add trip_duration_min"
+  },
+  {
+    "function": "add_cost_per_km",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Add cost_per_km"
+  },
+  {
+    "function": "filter_peak_hour_trips",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Filter peak hour trips"
+  },
+  {
+    "function": "top_n_users_by_distance",
+    "args": [
+      "sample_trips_typed_df",
+      2
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Top N users by distance"
+  },
+  {
+    "function": "avg_speed_by_zone",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Average speed by zone"
+  },
+  {
+    "function": "most_common_vehicle_type",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "str",
+    "visible": true,
+    "name": "Most common vehicle type"
+  },
+  {
+    "function": "cancellation_rate_by_zone",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Cancellation rate by zone"
+  },
+  {
+    "function": "high_duration_trips",
+    "args": [
+      "sample_trips_typed_df",
+      40
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "High duration trips"
+  },
+  {
+    "function": "count_active_vehicles_by_zone",
+    "args": [
+      "sample_vehicles_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Active vehicles by zone"
+  },
+  {
+    "function": "daily_net_revenue_trend",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Daily net revenue trend"
+  },
+  {
+    "function": "top_vehicle_by_net_revenue",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "tuple",
+    "visible": true,
+    "name": "Top vehicle by net revenue"
+  },
+  {
+    "function": "list_zones",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "list_str",
+    "visible": true,
+    "name": "List zones"
+  },
+  {
+    "function": "trips_in_date_range",
+    "args": [
+      "sample_trips_typed_df",
+      "2025-12-21",
+      "2025-12-23"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Trips in date range"
+  },
+  {
+    "function": "flag_safety_risk",
+    "args": [
+      "sample_trips_typed_df",
+      17.0,
+      2
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Flag safety risk"
+  },
+  {
+    "function": "top_n_risky_vehicles",
+    "args": [
+      "sample_trips_risk_df",
+      2
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Top risky vehicles"
+  },
+  {
+    "function": "avg_fare_by_payment_method",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Avg fare by payment"
+  },
+  {
+    "function": "get_longest_trip",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "tuple",
+    "visible": true,
+    "name": "Get longest trip"
+  },
+  {
+    "function": "define_user_profile_schema",
+    "args": [],
+    "expected": "StructType",
+    "visible": true,
+    "name": "Define user profile schema"
+  },
+  {
+    "function": "define_vehicle_schema",
+    "args": [],
+    "expected": "StructType",
+    "visible": true,
+    "name": "Define vehicle schema"
+  },
+  {
+    "function": "load_inline_profiles_and_plans",
+    "args": [
+      "spark",
+      "profile_schema",
+      "plan_schema"
+    ],
+    "expected": "tuple_df",
+    "visible": true,
+    "name": "Load inline profiles and plans"
+  },
+  {
+    "function": "join_profiles_with_plans",
+    "args": [
+      "profiles_df",
+      "plans_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Join profiles with plans"
+  },
+  {
+    "function": "enrich_full_name",
+    "args": [
+      "profiles_joined_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Enrich full_name"
+  },
+  {
+    "function": "add_start_epoch_seconds",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Add start_epoch_seconds"
+  },
+  {
+    "function": "add_start_ts_from_epoch",
+    "args": [
+      "sample_trips_epoch_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Add start_ts_from_epoch"
+  },
+  {
+    "function": "revenue_share_by_vehicle_type",
+    "args": [
+      "sample_metrics_df"
+    ],
+    "expected": "list_str",
+    "visible": true,
+    "name": "Revenue share by vehicle type"
+  },
+  {
+    "function": "busiest_zone_by_trips",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "tuple",
+    "visible": true,
+    "name": "Busiest zone"
+  },
+  {
+    "function": "completed_trips_by_zone",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Completed trips by zone"
+  },
+  {
+    "function": "add_utilization_score",
+    "args": [
+      "sample_trips_duration_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Add utilization score"
+  },
+  {
+    "function": "top_n_users_by_utilization",
+    "args": [
+      "sample_trips_util_df",
+      3
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Top users by utilization"
+  },
+  {
+    "function": "median_duration_by_zone",
+    "args": [
+      "sample_trips_duration_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Median duration by zone"
+  },
+  {
+    "function": "minmax_normalize_fare",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Normalize fare"
+  },
+  {
+    "function": "detect_outlier_fares",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Detect outlier fares"
+  },
+  {
+    "function": "monthly_net_revenue_by_zone",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Monthly net revenue by zone"
+  },
+  {
+    "function": "weekday_peak_trip_counts",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Weekday peak trip counts"
+  },
+  {
+    "function": "pivot_payment_counts_by_zone",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Pivot payment counts by zone"
+  },
+  {
+    "function": "calculate_net_revenue",
+    "args": [
+      "sample_trips_typed_df"
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Calculate net revenue"
+  },
+  {
+    "function": "flag_service_due",
+    "args": [
+      "sample_vehicles_typed_df",
+      20
+    ],
+    "expected": "DataFrame",
+    "visible": true,
+    "name": "Flag service due vehicles"
+  }
+]

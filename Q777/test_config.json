@@ -1,0 +1,67 @@
+[
+  {
+    "function": "load_appointment_data",
+    "args": [
+      "spark"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "append_wait_minutes",
+    "args": [
+      "sample_appointments_raw"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "get_long_wait_appointments",
+    "args": [
+      "sample_appointments_raw",
+      "sample_threshold_minutes"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "most_delayed_doctor",
+    "args": [
+      "sample_appointments_wait_minutes"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "long_wait_percentage",
+    "args": [
+      "sample_appointments_wait_minutes"
+    ],
+    "expected": "float"
+  },
+  {
+    "function": "most_delayed_appointment",
+    "args": [
+      "sample_appointments_wait_minutes"
+    ],
+    "expected": "tuple"
+  },
+  {
+    "function": "avg_wait_by_department",
+    "args": [
+      "sample_appointments_wait_minutes"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "top_n_patients_by_wait",
+    "args": [
+      "sample_appointments_wait_minutes",
+      "sample_top_n"
+    ],
+    "expected": "DataFrame"
+  },
+  {
+    "function": "wait_reason_counts",
+    "args": [
+      "sample_appointments_raw"
+    ],
+    "expected": "DataFrame"
+  }
+]
